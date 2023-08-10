@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="w-100 h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <meta name="description" content="{% block metadescription %} {% endblock %}" >
+
+<!-- for font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- for icon setup -->
+    <script src="https://kit.fontawesome.com/a8f3c2fa90.js" crossorigin="anonymous"></script>
+
+
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <div class="container">
+        {% include 'header.html' %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        {% include 'navbar.html' %}
+
+        {% block contend %}
+        {% endblock %}
+
+    </div>
+        {% include 'footer.html' %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
